@@ -1,25 +1,23 @@
 'use strict';
 
-import {makeWordArray} from "./getWord.js";
+
+import {generateGameWord} from "./getWord.js";
 
 const wordBox = document.querySelector('#word-box');
 
-export let lettersArray = makeWordArray();
-
-while (lettersArray.length > 6) {
-    lettersArray = makeWordArray();
-}
+let lettersArray;
 
 export function createLetterBox() {
-
-    for (let letter of lettersArray) {
-        wordBox.innerHTML += `
+    generateGameWord((generatedWord) => {
+        lettersArray = generatedWord
+        for (let letter of lettersArray) {
+            wordBox.innerHTML += `
            <div class="letter-container">
                <div class="word-letter">${letter.toUpperCase()}</div>
            </div>
         `
-    }
-    wordBox.style.gridTemplateColumns = `repeat(${lettersArray.length}, 7%)`;
-
+        }
+        wordBox.style.gridTemplateColumns = `repeat(${lettersArray.length}, 7%)`;
+    })
     return wordBox;
 }

@@ -2,22 +2,20 @@
 
 const url = 'https://random-word-api.herokuapp.com/word';
 
+/**
+ *  Функция getWord обращается в API и возвращает случайное слово
+ *
+ * @returns {Promise<any>}
+ */
 async function getWord() {
-
     let getWordUrl = await fetch(url);
-    let response = await getWordUrl.json();
-
-    return await response;
+    return getWordUrl.json();
 }
 
-let receiveWord = await getWord();
-
-export function makeWordArray() {
-
+function makeWordArray(generatedWord) {
     let split;
     let array = [];
-
-    for (let word of receiveWord) {
+    for (let word of generatedWord) {
         split = word.split('');
     }
     for (let letter of split) {
@@ -25,3 +23,18 @@ export function makeWordArray() {
     }
     return array;
 }
+
+/**
+ * @param loadingCallback функция обратного вызова, вызывается с переданным в неё сгенерированым словом
+ */
+export function generateGameWord(loadingCallback) {
+    getWord().then((result) => {
+        console.log(result[0])
+        if (result[0].length < 6) {
+            loadingCallback(makeWordArray(result))
+        } else {
+            generateGameWord(loadingCallback)
+        }
+    })
+}
+

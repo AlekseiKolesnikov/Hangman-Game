@@ -6,7 +6,7 @@ const wordBox = document.querySelector('#word-box');
 
 export let lettersArray = makeWordArray();
 
-while (lettersArray.length > 6) {
+while (lettersArray.length > 11) {
     lettersArray = makeWordArray();
 }
 

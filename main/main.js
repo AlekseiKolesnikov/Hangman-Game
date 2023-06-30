@@ -2,7 +2,6 @@
 
 import {createLetterBox} from "../script/wordBox.js";
 import {fillGameField} from "../script/letterBox.js";
-// import {lettersArray} from "../script/wordBox.js";
 
 const gameField = document.querySelector('#game-field');
 const startGameButton = document.querySelector('#start-button-container');
@@ -13,8 +12,8 @@ startGameButton.addEventListener("click", () => {
     gameField.style.display = 'block';
     startGameButton.style.display = 'none';
 
-    createLetterBox();
     fillGameField();
+    createLetterBox();
 });
 
 //Stop Game button

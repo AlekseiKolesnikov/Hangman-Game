@@ -12,8 +12,8 @@ startGameButton.addEventListener("click", () => {
     gameField.style.display = 'block';
     startGameButton.style.display = 'none';
 
-    createLetterBox();
     fillGameField();
+    createLetterBox();
 });
 
 //Stop Game button

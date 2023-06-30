@@ -1,0 +1,37 @@
+#stop-button-container {
+    box-sizing: border-box;
+    position: absolute;
+    width: 7.8em;
+    height: 2.9em;
+    background-color: white;
+    transform:translate(-50%, -50%);
+    top: 92.8%;
+    left: 50%;
+    border-radius: 0.5em;
+}
+
+#stop-button {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform:translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: black;
+    border-radius: 0.4em;
+    border-width: 0.01em;
+    box-shadow: 0 0.15em 0.2em;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: white;
+}
+
+#stop-button:hover {
+    background-color: #1f1f1f;
+    cursor: pointer;
+}
+
+#stop-button:active {
+    box-shadow: 0 0.1em 0 rgba(0, 0, 0.4, 0.4);
+}

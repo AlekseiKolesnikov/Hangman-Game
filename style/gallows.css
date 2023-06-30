@@ -1,0 +1,43 @@
+#gallows {
+    position: absolute;
+    width: 50%;
+    height: 44%;
+    transform: translate(-50%, -50%);
+    top: 27%;
+    left: 50%;
+}
+
+.details {
+    position: absolute;
+    background-color: black;
+    transform: translate(-50%, -50%);
+    border-radius: 0.2em;
+}
+
+#ground {
+    width: 80%;
+    height: 2%;
+    top: 95%;
+    left: 45%;
+}
+
+#vertical-stick {
+    width: 2%;
+    height: 90%;
+    top: 50.8%;
+    left: 5.9%;
+}
+
+#horizontal-stick {
+    width: 52%;
+    height: 2%;
+    top: 6.7%;
+    left: 31.2%;
+}
+
+#rope {
+    width: 2%;
+    height: 23%;
+    top: 17.8%;
+    left: 56.2%;
+}

@@ -1,0 +1,65 @@
+.person {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+#head {
+    background-color: white;
+    width: 12%;
+    height: 12%;
+    top: 34.8%;
+    left: 56.2%;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+#body {
+    background-color: black;
+    width: 1%;
+    height: 21%;
+    top: 50.5%;
+    left: 56.2%;
+    border-radius: 0.2em;
+}
+
+#right-hand {
+    background-color: black;
+    width: 1%;
+    height: 11%;
+    top: 41%;
+    left: 59.2%;
+    transform: rotate(-45deg);
+    border-radius: 0.2em;
+}
+
+#left-hand {
+    background-color: black;
+    width: 1%;
+    height: 11%;
+    top: 41%;
+    left: 52.1%;
+    transform: rotate(45deg);
+    border-radius: 0.2em;
+}
+
+#left-leg {
+    background-color: black;
+    width: 1%;
+    height: 12%;
+    top: 58.5%;
+    left: 51.8%;
+    transform: rotate(45deg);
+    border-radius: 0.2em;
+}
+
+#right-leg {
+    background-color: black;
+    width: 1%;
+    height: 12%;
+    top: 58.5%;
+    left: 59.7%;
+    transform: rotate(-45deg);
+    border-radius: 0.2em;
+}

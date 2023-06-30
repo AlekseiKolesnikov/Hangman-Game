@@ -1,0 +1,13 @@
+#game-field {
+    position: absolute;
+    background-color: white;
+    border-radius: 0.5em;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 33em;
+    height: 37em;
+    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+    display: none;
+}
+

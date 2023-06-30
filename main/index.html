@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman Game</title>
+</head>
+<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="../style/gallows.css">
+<link rel="stylesheet" type="text/css" href="../style/gameField.css">
+<link rel="stylesheet" type="text/css" href="../style/hangman.css">
+<link rel="stylesheet" type="text/css" href="../style/letterBox.css">
+<link rel="stylesheet" type="text/css" href="../style/wordBox.css">
+<link rel="stylesheet" type="text/css" href="../style/stopGame.css">
+<link rel="stylesheet" type="text/css" href="../style/startGame.css">
+<body>
+<div id="game-field">
+    <div id="gallows">
+        <div class="details" id="ground"></div>
+        <div class="details" id="vertical-stick"></div>
+        <div class="details" id="horizontal-stick"></div>
+        <div class="details" id="support-stick"></div>
+        <div class="details" id="rope"></div>
+        <div class="person" id="head"></div>
+        <div class="person" id="body"></div>
+        <div class="person" id="right-hand"></div>
+        <div class="person" id="left-hand"></div>
+        <div class="person" id="right-leg"></div>
+        <div class="person" id="left-leg"></div>
+    </div>
+    <div id="letter-box"></div>
+    <div id="word-box"></div>
+    <div id="stop-button-container">
+        <button id="stop-button">Stop Game</button>
+    </div>
+</div>
+<div id="start-button-container">
+    <button id="start-button">Start Game</button>
+</div>
+</body>
+<script type="module" src="main.js"></script>
+</html>

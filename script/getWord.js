@@ -10,8 +10,9 @@ async function getWord() {
     return await response;
 }
 
-export async function makeWordArray() {
-    let receiveWord = await getWord();
+let receiveWord = await getWord();
+
+export function makeWordArray() {
 
     let split;
     let array = [];

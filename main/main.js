@@ -13,7 +13,7 @@ startGameButton.addEventListener("click", () => {
     gameField.style.display = 'block';
     startGameButton.style.display = 'none';
 
-    await createLetterBox();
+    createLetterBox();
     fillGameField();
 });
 

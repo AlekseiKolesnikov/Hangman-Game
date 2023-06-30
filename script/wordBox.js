@@ -4,12 +4,13 @@ import {makeWordArray} from "./getWord.js";
 
 const wordBox = document.querySelector('#word-box');
 
-export async function createLetterBox() {
-    export let lettersArray = await makeWordArray();
+export let lettersArray = makeWordArray();
 
-    while (lettersArray.length > 6) {
-        lettersArray = makeWordArray();
-    }
+while (lettersArray.length > 6) {
+    lettersArray = makeWordArray();
+}
+
+export function createLetterBox() {
 
     for (let letter of lettersArray) {
         wordBox.innerHTML += `

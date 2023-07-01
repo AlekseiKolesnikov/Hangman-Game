@@ -20,7 +20,7 @@ function makeWordArray(generatedWord) {
     }
     for (let letter of split) {
         array.push(letter);
-    }
+    }   
     return array;
 }
 
@@ -30,7 +30,7 @@ function makeWordArray(generatedWord) {
 export function generateGameWord(loadingCallback) {
     getWord().then((result) => {
         console.log(result[0])
-        if (result[0].length < 6) {
+        if (result[0].length < 12) {
             loadingCallback(makeWordArray(result))
         } else {
             generateGameWord(loadingCallback)

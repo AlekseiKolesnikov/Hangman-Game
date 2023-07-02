@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Hangman Game</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="../style/gallows.css">
+    <link rel="stylesheet" type="text/css" href="../style/gameField.css">
+    <link rel="stylesheet" type="text/css" href="../style/hangman.css">
+    <link rel="stylesheet" type="text/css" href="../style/letterBox.css">
+    <link rel="stylesheet" type="text/css" href="../style/wordBox.css">
+    <link rel="stylesheet" type="text/css" href="../style/stopGame.css">
+    <link rel="stylesheet" type="text/css" href="../style/startGame.css">
+    <link rel="stylesheet" type="text/css" href="../style/loadingScreen.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Fasthand&family=Rajdhani:wght@600&family=Roboto&display=swap" rel="stylesheet">
 </head>
-<link rel="stylesheet" type="text/css" href="main.css">
-<link rel="stylesheet" type="text/css" href="../style/gallows.css">
-<link rel="stylesheet" type="text/css" href="../style/gameField.css">
-<link rel="stylesheet" type="text/css" href="../style/hangman.css">
-<link rel="stylesheet" type="text/css" href="../style/letterBox.css">
-<link rel="stylesheet" type="text/css" href="../style/wordBox.css">
-<link rel="stylesheet" type="text/css" href="../style/stopGame.css">
-<link rel="stylesheet" type="text/css" href="../style/startGame.css">
 <body>
 <div id="game-field">
     <div id="gallows">
@@ -35,6 +39,12 @@
 </div>
 <div id="start-button-container">
     <button id="start-button">Start Game</button>
+</div>
+<div id="loading-box">
+    <div id="loading-present">100%</div>
+    <div id="progress-bar">
+        <div id="progress"></div>
+    </div>
 </div>
 </body>
 <script type="module" src="main.js"></script>

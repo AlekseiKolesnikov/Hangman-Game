@@ -3,7 +3,7 @@
 
 import {generateGameWord} from "./getWord.js";
 
-const wordBox = document.querySelector('#word-box');
+const wordBox = document.querySelector('#w  ord-box');
 
 let lettersArray;
 

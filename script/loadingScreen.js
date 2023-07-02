@@ -1,7 +1,5 @@
 'use strict';
 
-export function loadingScreen() {
-    const loading = document.createElement('div');
-    loading.classList.add('loading');
-    return loading;
-}
+const loadingPresent = document.querySelector('#loading-present');
+const progress = document.querySelector('#progress');
+

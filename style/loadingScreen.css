@@ -6,7 +6,7 @@
     display: none;
 }
 
-#loading-text {
+#loading-present {
     color: black;
     font-size: 1.5em;
     text-align: center;
@@ -21,7 +21,7 @@
 }
 
 #progress {
-    width: 50%;
+    width: 60%;
     height: 100%;
     background-color: black;
     border-radius: 0.5em;

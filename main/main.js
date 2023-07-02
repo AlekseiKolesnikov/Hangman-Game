@@ -2,6 +2,8 @@
 
 import {createLetterBox} from "../script/wordBox.js";
 import {fillGameField} from "../script/letterBox.js";
+import {animateLoading} from "../script/loadingScreen.js";
+import {generateGameWord} from "../script/getWord.js";
 
 const gameField = document.querySelector('#game-field');
 const startGameButton = document.querySelector('#start-button-container');
@@ -10,12 +12,10 @@ const loadingScreen = document.querySelector('#loading-box');
 
 //Showing up of main play ground after start button
 startGameButton.addEventListener("click", () => {
-    loadingScreen.style.display = 'block';
-    gameField.style.display = 'none';
     startGameButton.style.display = 'none';
-    
-    fillGameField();
+    gameField.style.display = 'block';
     createLetterBox();
+    fillGameField();
 });
 
 //Stop Game button

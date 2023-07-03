@@ -35,7 +35,6 @@ export function generateGameWord(loadingCallback) {
         } else {
             generateGameWord(loadingCallback)
         }
+        return result[0];
     })
 }
-
-

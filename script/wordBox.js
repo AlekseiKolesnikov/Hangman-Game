@@ -21,5 +21,3 @@ export function createLetterBox() {
     })
     return wordBox;
 }
-
-

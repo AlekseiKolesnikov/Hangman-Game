@@ -6,7 +6,7 @@ const progress = document.querySelector('#progress');
 let count = 1;
 let per = 1;
 
-let loading = setInterval(animateLoading, 30);
+let loading = setInterval(animateLoading, 20);
 
 export function animateLoading() {
     if (count === 100 && per === 100) {

@@ -20,19 +20,4 @@ export function animateLoading() {
         progress.style.width = per + '%';
         loadingPresent.textContent = count + "%";
     }
-    return per;
 }
-
-
-/**
- * Loading logic
- */
-
-// export function loadingLogic() {
-//     generateGameWord(f())
-// }
-//
-// function f() {
-//     console.log(this);
-// }
-// loadingLogic();

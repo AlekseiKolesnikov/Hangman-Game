@@ -24,14 +24,6 @@ startGameButton.addEventListener("click", () => {
         gameField.style.display ='block';
     }, 1000)
 
-    // while (createLetterBoxChildren.length > 6) {
-    //     loadingScreen.style.display = 'block';
-    //
-    //     if (createLetterBoxChildren.length < 6) {
-    //         gameField.style.display = 'block';
-    //         break;
-    //     }
-    // }
 });
 
 //Stop Game button

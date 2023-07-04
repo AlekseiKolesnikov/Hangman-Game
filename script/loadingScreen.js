@@ -1,5 +1,7 @@
 'use strict';
 
+import {generateGameWord} from "./getWord.js";
+
 const loadingPresent = document.querySelector('#loading-present');
 const progress = document.querySelector('#progress');
 
@@ -20,3 +22,17 @@ export function animateLoading() {
     }
     return per;
 }
+
+
+/**
+ * Loading logic
+ */
+
+// export function loadingLogic() {
+//     generateGameWord(f())
+// }
+//
+// function f() {
+//     console.log(this);
+// }
+// loadingLogic();

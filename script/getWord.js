@@ -7,7 +7,7 @@ const url = 'https://random-word-api.herokuapp.com/word';
  *
  * @returns {Promise<any>}
  */
-async function getWord() {
+export async function getWord() {
     let getWordUrl = await fetch(url);
     return getWordUrl.json();
 }
@@ -29,11 +29,11 @@ function makeWordArray(generatedWord) {
  */
 export function generateGameWord(loadingCallback) {
     getWord().then((result) => {
-        console.log(result[0])
-        if (result[0].length < 12) {
-            loadingCallback(makeWordArray(result))
+        console.log(result[0]);
+        if (result[0].length < 6) {
+            loadingCallback(makeWordArray(result));
         } else {
-            generateGameWord(loadingCallback)
+            generateGameWord(loadingCallback);
         }
         return result[0];
     })

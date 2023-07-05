@@ -3,8 +3,8 @@
     height: 0.15em;
     width: 26em;
     justify-content: center;
+    vertical-align: middle;
     background: #fff;
-    margin: 28% auto 0;
     display: none;
 }
 

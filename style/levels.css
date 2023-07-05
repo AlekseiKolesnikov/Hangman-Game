@@ -5,7 +5,19 @@
     top: 50%;
     left: 50%;
     width: 22em;
+    height: 25em;
+    display: none;
+}
+
+.levels {
+    position: absolute;
+    background-color: white;
+    transform:translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 12em;
     height: 3.5em;
+    border: 2em solid black;
 }
 
 #hard-level {

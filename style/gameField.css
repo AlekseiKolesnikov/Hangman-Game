@@ -11,3 +11,12 @@
     display: none;
 }
 
+@keyframes show-game-field {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

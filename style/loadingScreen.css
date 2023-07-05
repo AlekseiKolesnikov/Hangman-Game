@@ -1,29 +1,75 @@
-#loading-box {
+#loader {
     position: absolute;
-    top: 47%;
+    top: 48%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
-}
-
-#loading-present {
-    color: black;
-    font-size: 1.5em;
-    text-align: center;
-    margin-bottom: 0.2em;
-}
-
-#progress-bar {
-    width: 15em;
-    height: 0.3em;
     background-color: cornflowerblue;
-    border-radius: 0.4em;
 }
 
-#progress {
-    width: 60%;
-    height: 100%;
-    background-color: black;
-    border-radius: 0.5em;
+.orig {
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
 
+.dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+}
+
+.dot.orig {
+    animation: rot_orig 1s infinite ease-in-out;
+}
+
+.dot.one {
+    animation-delay: 0s;
+    color: black;
+}
+
+.dot.two {
+    animation-delay: 100ms;
+    color: black;
+}
+
+.dot.three {
+    animation-delay: 200ms;
+    color: black;
+}
+
+.dot.four {
+    animation-delay: 300ms;
+    color: black;
+}
+
+@keyframes rot_orig {
+    from {
+        transform: rotate(0deg) translate(0, -3rem) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translate(0, -3rem) rotate(-360deg);
+    }
+}
+
+@keyframes show-loader {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide-loader {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

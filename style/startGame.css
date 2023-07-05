@@ -34,3 +34,13 @@
 #start-button:active {
     box-shadow: 0 0.15em 0 rgba(0, 0, 0, 0.8);
 }
+
+@keyframes hide-start-button {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

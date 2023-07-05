@@ -15,6 +15,9 @@ startGameButton.addEventListener('click', () => {
     transition: .2s;
     animation: hide-start-button .2s 1;
     animation-fill-mode: forwards;`;
+    setTimeout(() => {
+        startGameButton.remove();
+    },200);
 });
 
 //Stop Game button

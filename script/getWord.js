@@ -32,7 +32,7 @@ function makeWordArray(generatedWord) {
 export function generateGameWord(loadingCallback) {
     getWord().then((result) => {
         console.log(result[0]);
-        if (result[0].length < 5) {
+        if (result[0].length < 6) {
             loaderDisappearance();
             gameFieldAppearance();
             loadingCallback(makeWordArray(result));

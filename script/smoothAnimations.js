@@ -17,7 +17,8 @@ export function loaderDisappearance() {
     opacity: 1;
     transition: .3s;
     animation: hide-loader .4s 1;
-    animation-fill-mode: forwards;`;
+    animation-fill-mode: forwards;
+    display: none`;
 }
 
 export function gameFieldAppearance() {

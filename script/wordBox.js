@@ -2,14 +2,12 @@
 
 
 import {generateGameWord} from "./getWord.js";
-import {loadingScreen} from "./loadingScreen.js";
 
 const wordBox = document.querySelector('#word-box');
 
 let lettersArray;
 
 export function createLetterBox() {
-    loadingScreen();
     generateGameWord((generatedWord) => {
         lettersArray = generatedWord
         for (let letter of lettersArray) {

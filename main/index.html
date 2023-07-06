@@ -15,7 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../style/levels.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Fasthand&family=Rajdhani:wght@600&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Fasthand&family=Rajdhani:wght@600&family=Roboto&display=swap"
+          rel="stylesheet">
 </head>
 <body>
 <div id="game-field">
@@ -41,9 +42,18 @@
 <div id="start-button-container">
     <button id="start-button">Start Game</button>
 </div>
-<div id="levels-box"></div>
+<div id="levels-box">
+    <div id="hard-level" class="levels">
+        <button id="hard-level-btn" class="level-buttons">Hard Level</button>
+    </div>
+    <div id="medium-level" class="levels">
+        <button id="medium-level-btn" class="level-buttons">Medium Level</button>
+    </div>
+    <div id="easy-level" class="levels">
+        <button id="easy-level-btn" class="level-buttons">Easy Level</button>
+    </div>
+</div>
 <div id="loader"></div>
 </body>
 <script type="module" src="main.js"></script>
-<script type="module" src="../script/levelButtonsListener.js"></script>
 </html>

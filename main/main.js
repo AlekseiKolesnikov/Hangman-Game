@@ -1,15 +1,15 @@
 'use strict';
 
-import {levelsScreen} from "../script/levelsScreen.js";
 import {levelsAppearance} from "../script/smoothAnimations.js";
+import {listeners} from "../script/levelButtonsListener.js";
 
 const startGameButton = document.querySelector('#start-button-container');
 const stopGameButton = document.querySelector('#stop-button-container');
 
 //Showing up of main play ground after start button
 startGameButton.addEventListener('click', () => {
-    levelsScreen();
     levelsAppearance();
+    listeners();
 
     startGameButton.style.cssText = `
     opacity: 1;

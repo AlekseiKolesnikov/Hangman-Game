@@ -1,30 +1,35 @@
 'use strict';
 
-import {loadingScreen} from "./loadingScreen.js";
 import {createLetterBox} from "./wordBox.js";
 import {fillGameField} from "./letterBox.js";
+import {levelsDisappearance} from "./smoothAnimations.js";
 
 const hardLevelButton = document.querySelector('#hard-level');
-const mediumLevelButton = document.querySelector('#medium-level');
-const easyLevelButton = document.querySelector('#easy-level');
+// const mediumLevelButton = document.querySelector('#medium-level');
+// const easyLevelButton = document.querySelector('#easy-level');
 
 /**
  * Each level button logic
  */
-hardLevelButton.addEventListener('click', () => {
-    loadingScreen();
-    createLetterBox();
-    fillGameField();
-});
 
-mediumLevelButton.addEventListener('click', () => {
-    loadingScreen();
-    createLetterBox();
-    fillGameField();
-});
+if (hardLevelButton) {
+    hardLevelButton.addEventListener('click', () => {
+        createLetterBox();
+        fillGameField();
+        levelsDisappearance();
+    });
+}
 
-easyLevelButton.addEventListener('click', () => {
-    loadingScreen();
-    createLetterBox();
-    fillGameField();
-});
+// mediumLevelButton.addEventListener('click', () => {
+//     loadingScreen();
+//     createLetterBox();
+//     fillGameField();
+//     levelsDisappearance()
+// });
+//
+// easyLevelButton.addEventListener('click', () => {
+//     loadingScreen();
+//     createLetterBox();
+//     fillGameField();
+//     levelsDisappearance();
+// });

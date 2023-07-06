@@ -1,31 +1,53 @@
 #levels-box {
     position: absolute;
-    background-color: white;
-    transform:translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
     width: 22em;
-    height: 25em;
+    height: 20em;
     display: none;
 }
 
 .levels {
-    position: absolute;
-    background-color: white;
-    transform:translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+    position: relative;
+    justify-content: center;
     width: 12em;
     height: 3.5em;
-    border: 2em solid black;
+    margin: 2.05em auto;
 }
 
-#hard-level {
-
+.level-buttons {
+    position: relative;
+    background-color: white;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+    border-radius: 0.4em;
+    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
 }
 
-#medium-level {
-
+.level-buttons:hover {
+    background-color: aliceblue;
+    cursor: pointer;
 }
 
-#easy-level
+@keyframes show-levels {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide-levels {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

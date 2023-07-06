@@ -1,6 +1,6 @@
 'use strict';
 
-import {gameFieldAppearance, loaderAppearance, loaderDisappearance} from "./smoothAnimations.js";
+import {gameFieldAppearance, loaderAppearance, loaderDisappearance} from "../animationsControler/smoothAnimations.js";
 
 const url = 'https://random-word-api.herokuapp.com/word';
 
@@ -32,7 +32,7 @@ function makeWordArray(generatedWord) {
 export function generateGameWord(loadingCallback) {
     getWord().then((result) => {
         console.log(result[0]);
-        if (result[0].length < 6) {
+        if (result[0].length < 12) {
             loaderDisappearance();
             gameFieldAppearance();
             loadingCallback(makeWordArray(result));

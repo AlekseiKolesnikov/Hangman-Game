@@ -1,7 +1,7 @@
 'use strict';
 
-import {levelsAppearance} from "../script/smoothAnimations.js";
-import {listeners} from "../script/levelButtonsListener.js";
+import {levelsAppearance} from "../animationsControler/smoothAnimations.js";
+import {listeners} from "../levelsScreen/levelButtonsListener.js";
 
 const startGameButton = document.querySelector('#start-button-container');
 const stopGameButton = document.querySelector('#stop-button-container');

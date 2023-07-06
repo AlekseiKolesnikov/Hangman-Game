@@ -1,8 +1,8 @@
 'use strict';
 
-import {createLetterBox} from "./wordBox.js";
-import {fillGameField} from "./letterBox.js";
-import {levelsDisappearance} from "./smoothAnimations.js";
+import {createLetterBox} from "../wordBox/wordBox.js";
+import {fillGameField} from "../letterBox/letterBox.js";
+import {levelsDisappearance} from "../animationsControler/smoothAnimations.js";
 
 const hardLevelButton = document.querySelector('#hard-level');
 const mediumLevelButton = document.querySelector('#medium-level');

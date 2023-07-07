@@ -1,5 +1,7 @@
 'use strict';
 
+import {listeners} from "../levelsScreen/levelButtonsListener.js";
+
 const levelsBox = document.querySelector('#levels-box');
 const loader = document.querySelector('#loader');
 const gameField = document.querySelector('#game-field');

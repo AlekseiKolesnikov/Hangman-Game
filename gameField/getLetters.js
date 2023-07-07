@@ -1,22 +1,28 @@
 'use strict';
 
-const letterBoxItems = document.querySelectorAll('.letter');
-const wordLetters = document.querySelectorAll('.word-letter');
+import {fillGameField} from "./letterBox/letterBox.js";
+import {createLetterBox} from "./wordBox/wordBox.js";
 
-export function getLetterOfLetterBox() {
-    let letterTextContent;
+export function getLettersOfLetterBox() {
+    const letterBoxItems = fillGameField().childNodes;
+
+    let letterTextContent = [];
     for (let currentItemLetterBox of letterBoxItems) {
-        letterTextContent = currentItemLetterBox.textContent;
+        letterTextContent.push(currentItemLetterBox);
+        currentItemLetterBox++;
     }
     return letterTextContent;
 }
 
-console.log(getLetterOfTheWord());
+export function getLettersOfTheWord() {
+    const wordLetters = createLetterBox().childNodes;
 
-export function getLetterOfTheWord() {
-    let wordLetterTextContent;
-    for(let letterOfTheWord of wordLetters) {
-        wordLetterTextContent = letterOfTheWord.textContent;
+    let wordLetterTextContent = [];
+    for (let currentItemWordBox of wordLetters) {
+        if (currentItemWordBox.nodeType === Node.ELEMENT_NODE) {
+            wordLetterTextContent.push(currentItemWordBox.childNodes[1]);
+            currentItemWordBox++;
+        }
     }
     return wordLetterTextContent;
 }

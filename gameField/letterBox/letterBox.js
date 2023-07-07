@@ -16,8 +16,10 @@ export function fillGameField() {
     for (let letter of alphabetArray) {
         let currentLetter = document.createElement('div');
         currentLetter.classList.add('letter');
+        currentLetter.setAttribute('value', `${letter}`)
 
         currentLetter.append(letter);
         letterBox.append(currentLetter);
     }
+    return letterBox
 }

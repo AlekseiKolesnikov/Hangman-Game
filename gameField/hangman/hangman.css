@@ -1,6 +1,7 @@
 .person {
     position: absolute;
     transform: translate(-50%, -50%);
+    display: none;
 }
 
 #head {

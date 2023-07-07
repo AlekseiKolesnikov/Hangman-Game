@@ -1,6 +1,6 @@
 'use strict';
 
-import {gameFieldAppearance, loaderAppearance, loaderDisappearance} from "../animationsControler/smoothAnimations.js";
+import {gameFieldAppearance, loaderAppearance, loaderDisappearance} from "../../animationsControler/smoothAnimations.js";
 
 const url = 'https://random-word-api.herokuapp.com/word';
 

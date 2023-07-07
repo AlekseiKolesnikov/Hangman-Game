@@ -3,7 +3,7 @@
 const letterBoxItems = document.querySelectorAll('.letter');
 const wordLetters = document.querySelectorAll('.word-letter');
 
-function getLetterOfLetterBox() {
+export function getLetterOfLetterBox() {
     let letterTextContent;
     for (let currentItemLetterBox of letterBoxItems) {
         letterTextContent = currentItemLetterBox.textContent;
@@ -11,17 +11,12 @@ function getLetterOfLetterBox() {
     return letterTextContent;
 }
 
-function getLetterOfTheWord() {
+console.log(getLetterOfTheWord());
+
+export function getLetterOfTheWord() {
     let wordLetterTextContent;
     for(let letterOfTheWord of wordLetters) {
         wordLetterTextContent = letterOfTheWord.textContent;
     }
     return wordLetterTextContent;
-}
-
-/**
- * Letters in the letterBox.js matching with word letters in WordBox.js
- */
-function LettersBoxListener() {
-
 }

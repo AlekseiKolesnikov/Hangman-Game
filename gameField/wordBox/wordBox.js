@@ -1,6 +1,5 @@
 'use strict';
 
-
 import {generateGameWord} from "./getWord.js";
 
 const wordBox = document.querySelector('#word-box');

@@ -9,20 +9,20 @@ export function getLettersOfLetterBox() {
     let letterTextContent = [];
     for (let currentItemLetterBox of letterBoxItems) {
         letterTextContent.push(currentItemLetterBox);
-        currentItemLetterBox++;
     }
     return letterTextContent;
 }
 
-export function getLettersOfTheWord() {
+export function getLettersOfWordBox() {
     const wordLetters = createLetterBox().childNodes;
-
     let wordLetterTextContent = [];
+
     for (let currentItemWordBox of wordLetters) {
         if (currentItemWordBox.nodeType === Node.ELEMENT_NODE) {
+            console.log(currentItemWordBox);
             wordLetterTextContent.push(currentItemWordBox.childNodes[1]);
-            currentItemWordBox++;
         }
     }
     return wordLetterTextContent;
 }
+

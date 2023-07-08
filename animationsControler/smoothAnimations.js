@@ -1,6 +1,7 @@
 'use strict';
 
 import {listeners} from "../levelsScreen/levelButtonsListener.js";
+import {lettersBoxListener} from "../gameField/letterBoxListener.js";
 
 const levelsBox = document.querySelector('#levels-box');
 const loader = document.querySelector('#loader');
@@ -25,6 +26,8 @@ export function levelsDisappearance() {
     setTimeout(() => {
         levelsBox.remove();
     }, 300)
+
+    lettersBoxListener();
 }
 
 export function loaderAppearance() {

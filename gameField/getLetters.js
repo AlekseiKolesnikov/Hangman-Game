@@ -1,7 +1,6 @@
 'use strict';
 
 import {fillGameField} from "./letterBox/letterBox.js";
-import {createLetterBox} from "./wordBox/wordBox.js";
 
 export function getLettersOfLetterBox() {
     const letterBoxItems = fillGameField().childNodes;
@@ -13,11 +12,11 @@ export function getLettersOfLetterBox() {
     return letterTextContent;
 }
 
-export function getLettersOfWordBox() {
-    const wordLetters = createLetterBox().childNodes;
+export function getLettersOfWordBox(wordLetters) {
     let wordLetterTextContent = [];
-
+    console.log(wordLetters)
     for (let currentItemWordBox of wordLetters) {
+        console.log(currentItemWordBox);
         if (currentItemWordBox.nodeType === Node.ELEMENT_NODE) {
             console.log(currentItemWordBox);
             wordLetterTextContent.push(currentItemWordBox.childNodes[1]);
@@ -25,4 +24,3 @@ export function getLettersOfWordBox() {
     }
     return wordLetterTextContent;
 }
-

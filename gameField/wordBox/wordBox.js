@@ -7,7 +7,7 @@ const wordBox = document.querySelector('#word-box');
 
 let lettersArray;
 
-export function createLetterBox(getFinalWord) {
+export function createLetterBox(getFinalWordCallback) {
     generateGameWord((generatedWord) => {
         lettersArray = generatedWord
         for (let letter of lettersArray) {
@@ -18,7 +18,7 @@ export function createLetterBox(getFinalWord) {
         `
         }
         wordBox.style.gridTemplateColumns = `repeat(${lettersArray.length}, 7%)`;
-        getFinalWord(getLettersOfWordBox(wordBox.childNodes));
+        getFinalWordCallback(getLettersOfWordBox(wordBox.children));
     })
     return wordBox
 }

@@ -16,9 +16,7 @@ export function getLettersOfWordBox(wordLetters) {
     let wordLetterTextContent = [];
     console.log(wordLetters)
     for (let currentItemWordBox of wordLetters) {
-        console.log(currentItemWordBox);
         if (currentItemWordBox.nodeType === Node.ELEMENT_NODE) {
-            console.log(currentItemWordBox);
             wordLetterTextContent.push(currentItemWordBox.childNodes[1]);
         }
     }

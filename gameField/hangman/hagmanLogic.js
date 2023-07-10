@@ -3,9 +3,9 @@
 const hangmanDetails = document.querySelectorAll('.person');
 
 export function getHangmanDetail() {
-    let hangmanDetail;
+    let hangmanDetail = [];
     for(let detail of hangmanDetails) {
-        hangmanDetail = detail;
+        hangmanDetail.push(detail);
     }
     return hangmanDetail;
 }

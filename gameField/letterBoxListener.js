@@ -1,7 +1,8 @@
 'use strict';
 
-import {getLettersOfLetterBox, getLettersOfWordBox} from "./getLetters.js";
+import {getLettersOfLetterBox} from "./getLetters.js";
 import {createLetterBox} from "./wordBox/wordBox.js";
+import {getHangmanDetail} from "./hangman/hagmanLogic.js";
 
 /**
  * Letters in the letterBox.js matching with word letters in WordBox.js
@@ -15,12 +16,13 @@ export function lettersBoxListener() {
             letterBoxItem.addEventListener('click', () => {
                 if (letterBoxItem.textContent === wordBoxItem.textContent) {
                     wordBoxItem.style.display = 'block';
-                } else {
-                    // getHangmanDetail().style.display = 'block'
+                }
+                if (letterBoxItem.textContent !== wordBoxItem.textContent) {
+                    console.log(getHangmanDetail())
+                    // getHangmanDetail().style.display = 'block';
                 }
             });
         }
         }
     })
-    console.log(letterOfLetterBox)
 }

@@ -13,16 +13,16 @@ const easyLevelButton = document.querySelector('#easy-level');
 export function listeners() {
     hardLevelButton.addEventListener('click', () => {
         levelsDisappearance();
-        lettersBoxListener();
+        lettersBoxListener(12);
     });
 
     mediumLevelButton.addEventListener('click', () => {
         levelsDisappearance();
-        lettersBoxListener();
+        lettersBoxListener(8);
     });
 
     easyLevelButton.addEventListener('click', () => {
         levelsDisappearance();
-        lettersBoxListener();
+        lettersBoxListener(5);
     });
 }

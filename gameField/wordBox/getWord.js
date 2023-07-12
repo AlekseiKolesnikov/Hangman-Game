@@ -28,16 +28,18 @@ function makeWordArray(generatedWord) {
 
 /**
  * @param loadingCallback функция обратного вызова, вызывается с переданным в неё сгенерированым словом
+ * @param wordLength
  */
-export function generateGameWord(loadingCallback) {
+export function generateGameWord(loadingCallback, wordLength) {
+    console.log(wordLength)
     getWord().then((result) => {
         console.log(result[0]);
-        if (result[0].length < 12) {
+        if (result[0].length < wordLength) {
             loaderDisappearance();
             gameFieldAppearance();
             loadingCallback(makeWordArray(result));
         } else {
-            generateGameWord(loadingCallback);
+            generateGameWord(loadingCallback, wordLength);
             loaderAppearance();
         }
     })

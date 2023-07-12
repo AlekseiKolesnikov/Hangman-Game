@@ -5,9 +5,9 @@ import {getLettersOfWordBox} from "../getLetters.js";
 
 const wordBox = document.querySelector('#word-box');
 
-let lettersArray;
-
 export function createLetterBox(getFinalWordCallback, wordLength) {
+    let lettersArray;
+
     generateGameWord((generatedWord) => {
         lettersArray = generatedWord
         for (let letter of lettersArray) {

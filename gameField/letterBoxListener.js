@@ -11,16 +11,25 @@ export function lettersBoxListener(wordLength) {
     let letterOfLetterBox = getLettersOfLetterBox();
 
     createLetterBox((wordBoxLetters) => {
-        for (let letterBoxItem of letterOfLetterBox) {
-        for (let wordBoxItem of wordBoxLetters) {
-            letterBoxItem.addEventListener('click', () => {
-                if (letterBoxItem.textContent === wordBoxItem.textContent) {
-                    wordBoxItem.style.display = 'block';
-                } else {
-                    console.log(getHangmanDetails());
+        let wordLetters = wordBoxLetters;
+
+        letterOfLetterBox.forEach((item) => {
+            let wrongLetter = false;
+
+            item.addEventListener('click', () => {
+                for (let wordBoxLetter of wordLetters) {
+                    if (item.textContent === wordBoxLetter.textContent) {
+                        wordBoxLetter.style.display = 'block'
+                    } else {
+                        wrongLetter = true
+                    }
+                }
+                if (wrongLetter === true) {
+                    console.log('wrong letter')
+                    let g = getHangmanDetails();
+                    g[0].style.display = 'block';
                 }
             });
-        }
-        }
+        })
     }, wordLength)
 }

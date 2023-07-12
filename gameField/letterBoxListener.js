@@ -7,7 +7,7 @@ import {getHangmanDetails} from "./hangman/hagmanLogic.js";
 /**
  * Letters in the letterBox.js matching with word letters in WordBox.js
  */
-export function lettersBoxListener(wordLength) {
+export function lettersBoxListener(wordMaxLength, wordMinLength) {
     let letterOfLetterBox = getLettersOfLetterBox();
 
     createLetterBox((wordBoxLetters) => {
@@ -31,5 +31,5 @@ export function lettersBoxListener(wordLength) {
                 }
             });
         })
-    }, wordLength)
+    }, wordMaxLength, wordMinLength)
 }

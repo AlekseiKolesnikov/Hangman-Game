@@ -5,7 +5,7 @@ import {getLettersOfWordBox} from "../getLetters.js";
 
 const wordBox = document.querySelector('#word-box');
 
-export function createLetterBox(getFinalWordCallback, wordLength) {
+export function createLetterBox(getFinalWordCallback, wordMaxLength, wordMinLength) {
     let lettersArray;
 
     generateGameWord((generatedWord) => {
@@ -19,6 +19,6 @@ export function createLetterBox(getFinalWordCallback, wordLength) {
         }
         wordBox.style.gridTemplateColumns = `repeat(${lettersArray.length}, 7%)`;
         getFinalWordCallback(getLettersOfWordBox(wordBox.children));
-    }, wordLength)
+    }, wordMaxLength, wordMinLength)
     return wordBox
 }

@@ -2,10 +2,12 @@
 
 const hangmanDetails = document.querySelectorAll('.person');
 
-export function getHangmanDetail() {
+export function getHangmanDetails() {
     let hangmanDetail = [];
+    let bodyPart = hangmanDetail.shift();
     for(let detail of hangmanDetails) {
         hangmanDetail.push(detail);
     }
-    return hangmanDetail;
+    console.log(bodyPart)
+    return hangmanDetail[0];
 }

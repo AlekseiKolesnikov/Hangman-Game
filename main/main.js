@@ -8,16 +8,20 @@ const stopGameButton = document.querySelector('#stop-button-container');
 
 //Showing up of main play ground after start button
 startGameButton.addEventListener('click', () => {
-    levelsAppearance();
-    listeners();
-    startButtonDisAppearance()
-
-    setTimeout(() => {
-        startGameButton.style.display = 'none';
-    }, 300);
+    launcher();
+    startButtonDisAppearance();
 });
 
 //Stop Game button
 stopGameButton.addEventListener('click', function () {
 
 });
+
+export function launcher() {
+    levelsAppearance();
+    listeners();
+
+    setTimeout(() => {
+        startGameButton.style.display = 'none';
+    }, 300);
+}

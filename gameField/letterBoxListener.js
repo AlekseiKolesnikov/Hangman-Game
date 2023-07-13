@@ -2,7 +2,7 @@
 
 import {getLettersOfLetterBox} from "./getLetters.js";
 import {createLetterBox} from "./wordBox/wordBox.js";
-import {victoryScreen} from "../victoryScreen/victoryScreen.js";
+import {defeatScreen, victoryScreen} from "../finalScreen/finalScreen.js";
 import {getBodyArray} from "./hangman/hagmanLogic.js";
 import {gameFieldDisappearance, letterDisappearance} from "../animationsControler/smoothAnimations.js";
 
@@ -42,6 +42,10 @@ export function lettersBoxListener(wordMaxLength, wordMinLength) {
                     console.log('wrong letter');
                     getBodyArray()[count].style.display = 'block';
                     count++;
+                }
+                if (count === 6) {
+                    gameFieldDisappearance();
+                    defeatScreen();
                 }
             });
         })

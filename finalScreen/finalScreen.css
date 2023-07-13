@@ -16,17 +16,29 @@
     width: 100%;
 }
 
-#victory-text span {
+#defeat-text {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 100%;
+}
+
+#victory-text span, #defeat-text span {
     position: relative;
     display: inline-block;
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: bold;
     letter-spacing: 0.2em;
-    font-size: 2em;
+    font-size: 1.9em;
     color: #fff;
     text-transform: uppercase;
     animation: wave 1.2s infinite;
     animation-delay: calc(.1s * var(--i));
+}
+
+#victory-text span, #defeat-text {
+    display: none;
 }
 
 #start-over-button {

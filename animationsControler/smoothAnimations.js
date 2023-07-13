@@ -4,6 +4,8 @@ const levelsBox = document.querySelector('#levels-box');
 const loader = document.querySelector('#loader');
 const gameField = document.querySelector('#game-field');
 const victoryBox = document.querySelector('#victory-box');
+const victoryText = document.querySelector('#victory-text');
+const defeatText = document.querySelector('#defeat-text');
 const startOverButton = document.querySelector('#start-over-button');
 const startGameButton = document.querySelector('#start-button-container');
 
@@ -14,16 +16,6 @@ export function startButtonDisAppearance() {
     transition: .3s;
     animation: hide-start-button .3s 1;
     animation-fill-mode: forwards;`;
-}
-
-export function startButtonAppearance() {
-    startGameButton.style.cssText = `
-    opacity: 0;
-    transition: .5s;
-    animation: show-start-button .5s 1;
-    animation-fill-mode: forwards;
-    animation-delay: .2s;
-    display: block;`;
 }
 
 export function levelsAppearance() {
@@ -97,7 +89,8 @@ export function letterDisappearance(letter) {
     }, 800);
 }
 
-export function victoryScreenAppearance() {
+export function defeatScreenAppearance() {
+    victoryText.remove()
     victoryBox.style.cssText = `
     opacity: 0;
     transition: .3s;
@@ -105,6 +98,21 @@ export function victoryScreenAppearance() {
     animation-fill-mode: forwards;
     animation-delay: .5s;
     display: block;`;
+
+    defeatText.style.display = 'block';
+}
+
+export function victoryScreenAppearance() {
+    defeatText.remove();
+    victoryBox.style.cssText = `
+    opacity: 0;
+    transition: .3s;
+    animation: show-victory-box .3s 1;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+    display: block;`;
+
+    victoryText.style.display = 'block';
 }
 
 export function victoryScreenDisAppearance() {
@@ -124,4 +132,3 @@ export function startOverButtonAppearance() {
     animation-delay: 1.5s;
     display: block;`
 }
-

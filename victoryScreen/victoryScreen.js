@@ -1,7 +1,7 @@
 'use strict';
 
 import {
-    gameFieldDisappearance, startButtonAppearance,
+    startButtonAppearance,
     startOverButtonAppearance,
     victoryScreenAppearance, victoryScreenDisAppearance
 } from "../animationsControler/smoothAnimations.js";
@@ -9,7 +9,6 @@ import {
 const startOverButton = document.querySelector('#start-over-button');
 
 export function victoryScreen() {
-    gameFieldDisappearance();
     victoryScreenAppearance();
     startOverButtonAppearance();
 

@@ -2,7 +2,6 @@
 
 import {levelsAppearance, startButtonDisAppearance} from "../animationsControler/smoothAnimations.js";
 import {listeners} from "../levelsScreen/levelButtonsListener.js";
-import {victoryScreen} from "../victoryScreen/victoryScreen.js";
 
 const startGameButton = document.querySelector('#start-button-container');
 const stopGameButton = document.querySelector('#stop-button-container');

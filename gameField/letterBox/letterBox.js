@@ -2,10 +2,6 @@
 
 const letterBox = document.querySelector('#letter-box');
 
-//Grid
-let size = 11;
-letterBox.style.gridTemplateColumns = `repeat(${size},auto)`;
-
 //Letters to letter-box
 let alphabetArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
     'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];

@@ -78,10 +78,12 @@ export function gameFieldAppearance() {
 export function gameFieldDisappearance() {
     gameField.style.cssText = `
     opacity: 1;
-    transition: .3s;
-    animation: hide-game-field .3s 1;
-    animation-fill-mode: forwards;
-    display: none`;
+    transition: .8s;
+    animation: hide-game-field .8s 1;
+    animation-fill-mode: forwards;`;
+    setTimeout(() => {
+        gameField.style.display = 'none';
+    }, 800);
 }
 
 export function letterDisappearance(letter) {
@@ -101,6 +103,7 @@ export function victoryScreenAppearance() {
     transition: .3s;
     animation: show-victory-box .3s 1;
     animation-fill-mode: forwards;
+    animation-delay: .5s;
     display: block;`;
 }
 

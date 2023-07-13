@@ -4,7 +4,7 @@ import {getLettersOfLetterBox} from "./getLetters.js";
 import {createLetterBox} from "./wordBox/wordBox.js";
 import {victoryScreen} from "../victoryScreen/victoryScreen.js";
 import {getBodyArray} from "./hangman/hagmanLogic.js";
-import {letterDisappearance} from "../animationsControler/smoothAnimations.js";
+import {gameFieldDisappearance, letterDisappearance} from "../animationsControler/smoothAnimations.js";
 
 /**
  * Letters in the letterBox.js matching with word letters in WordBox.js
@@ -25,15 +25,13 @@ export function lettersBoxListener(wordMaxLength, wordMinLength) {
                 for (let wordBoxLetter of wordLetters) {
                     if (item.textContent === wordBoxLetter.textContent) {
                         lettersCountArray.push(wordBoxLetter);
-                        console.log(lettersCountArray.length);
                         wordBoxLetter.style.display = 'block';
                         letterDisappearance(item);
                         matchFound = true;
                     }
                 }
                 if (lettersCountArray.length === wordLetters.length) {
-                    console.log(`lettersArray = ${lettersCountArray.length}
-                    wordArray = ${wordLetters.length}`);
+                    gameFieldDisappearance();
                     victoryScreen();
                 }
                 if (matchFound) {

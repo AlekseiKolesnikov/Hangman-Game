@@ -13,10 +13,14 @@
     <link rel="stylesheet" type="text/css" href="../style/startGame.css">
     <link rel="stylesheet" type="text/css" href="../loader/loadingScreen.css">
     <link rel="stylesheet" type="text/css" href="../levelsScreen/levels.css">
+    <link rel="stylesheet" type="text/css" href="../victoryScreen/victoryScreen.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Fasthand&family=Rajdhani:wght@600&family=Roboto&display=swap"
           rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
 <div id="game-field">
@@ -56,6 +60,19 @@
 <div id="loader">
     <div class="circle"></div>
     <p class="loading">Loading</p>
+</div>
+<div id="victory-box">
+    <div id="victory-text">
+        <span style="--i:1">V</span>
+        <span style="--i:2">I</span>
+        <span style="--i:3">C</span>
+        <span style="--i:4">T</span>
+        <span style="--i:5">O</span>
+        <span style="--i:6">R</span>
+        <span style="--i:7">Y</span>
+        <span style="--i:8">!</span>
+    </div>
+    <button id="start-over-button">Start Over</button>
 </div>
 </body>
 <script type="module" src="main.js"></script>

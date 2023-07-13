@@ -1,10 +1,30 @@
 'use strict';
 
-import {lettersBoxListener} from "../gameField/letterBoxListener.js";
-
 const levelsBox = document.querySelector('#levels-box');
 const loader = document.querySelector('#loader');
 const gameField = document.querySelector('#game-field');
+const victoryBox = document.querySelector('#victory-box');
+const startOverButton = document.querySelector('#start-over-button');
+const startGameButton = document.querySelector('#start-button-container');
+
+
+export function startButtonDisAppearance() {
+    startGameButton.style.cssText = `
+    opacity: 1;
+    transition: .3s;
+    animation: hide-start-button .3s 1;
+    animation-fill-mode: forwards;`;
+}
+
+export function startButtonAppearance() {
+    startGameButton.style.cssText = `
+    opacity: 0;
+    transition: .5s;
+    animation: show-start-button .5s 1;
+    animation-fill-mode: forwards;
+    animation-delay: .2s;
+    display: block;`;
+}
 
 export function levelsAppearance() {
     levelsBox.style.cssText = `
@@ -54,3 +74,51 @@ export function gameFieldAppearance() {
     animation-delay: .2s;
     display: block;`;
 }
+
+export function gameFieldDisappearance() {
+    gameField.style.cssText = `
+    opacity: 1;
+    transition: .3s;
+    animation: hide-game-field .3s 1;
+    animation-fill-mode: forwards;
+    display: none`;
+}
+
+export function letterDisappearance(letter) {
+    letter.style.cssText = `
+    opacity: 1;
+    transition: .5s;
+    animation: hide-letter .5s 1;
+    animation-fill-mode: forwards;`;
+    setTimeout(() => {
+        letter.remove();
+    }, 800);
+}
+
+export function victoryScreenAppearance() {
+    victoryBox.style.cssText = `
+    opacity: 0;
+    transition: .3s;
+    animation: show-victory-box .3s 1;
+    animation-fill-mode: forwards;
+    display: block;`;
+}
+
+export function victoryScreenDisAppearance() {
+    victoryBox.style.cssText = `
+    opacity: 1;
+    transition: .3s;
+    animation: hide-victory-box .3s 1;
+    animation-fill-mode: forwards;`;
+}
+
+export function startOverButtonAppearance() {
+    startOverButton.style.cssText = `
+    opacity: 0;
+    transition: .3s;
+    animation: show-start-over-button .3s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+    display: block;`
+}
+

@@ -40,7 +40,7 @@ export function generateGameWord(loadingCallback, wordMaxLength, wordMinLength) 
             gameFieldAppearance();
             loadingCallback(makeWordArray(result));
         } else {
-            generateGameWord(loadingCallback, wordMinLength, wordMaxLength);
+            generateGameWord(loadingCallback, wordMaxLength, wordMinLength);
             loaderAppearance();
         }
     })

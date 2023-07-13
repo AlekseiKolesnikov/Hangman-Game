@@ -32,3 +32,13 @@
 .letter:active {
     box-shadow: 0 0.1em 0 rgba(0, 0, 0, 0.8);
 }
+
+@keyframes hide-letter {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

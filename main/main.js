@@ -1,7 +1,8 @@
 'use strict';
 
-import {levelsAppearance} from "../animationsControler/smoothAnimations.js";
+import {levelsAppearance, startButtonDisAppearance} from "../animationsControler/smoothAnimations.js";
 import {listeners} from "../levelsScreen/levelButtonsListener.js";
+import {victoryScreen} from "../victoryScreen/victoryScreen.js";
 
 const startGameButton = document.querySelector('#start-button-container');
 const stopGameButton = document.querySelector('#stop-button-container');
@@ -10,18 +11,14 @@ const stopGameButton = document.querySelector('#stop-button-container');
 startGameButton.addEventListener('click', () => {
     levelsAppearance();
     listeners();
+    startButtonDisAppearance()
 
-    startGameButton.style.cssText = `
-    opacity: 1;
-    transition: .3s;
-    animation: hide-start-button .3s 1;
-    animation-fill-mode: forwards;`;
     setTimeout(() => {
-        startGameButton.remove();
+        startGameButton.style.display = 'none';
     }, 300);
 });
 
 //Stop Game button
 stopGameButton.addEventListener('click', function () {
-
+    victoryScreen();
 });

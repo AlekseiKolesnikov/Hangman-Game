@@ -20,5 +20,5 @@ startGameButton.addEventListener('click', () => {
 
 //Stop Game button
 stopGameButton.addEventListener('click', function () {
-    victoryScreen();
+
 });

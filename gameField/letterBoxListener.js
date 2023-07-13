@@ -2,8 +2,8 @@
 
 import {getLettersOfLetterBox} from "./getLetters.js";
 import {createLetterBox} from "./wordBox/wordBox.js";
-import {getHangmanDetails} from "./hangman/hagmanLogic.js";
 import {victoryScreen} from "../victoryScreen/victoryScreen.js";
+import {getBodyArray} from "./hangman/hagmanLogic.js";
 import {letterDisappearance} from "../animationsControler/smoothAnimations.js";
 
 /**
@@ -14,28 +14,36 @@ export function lettersBoxListener(wordMaxLength, wordMinLength) {
 
     createLetterBox((wordBoxLetters) => {
         let wordLetters = wordBoxLetters;
+        let count = 0;
+        let wrongLetter = true;
+        let lettersCountArray = [];
 
         letterOfLetterBox.forEach((item) => {
-            let wrongLetter = false;
-
             item.addEventListener('click', () => {
-                let count = 1;
+                let matchFound = false;
+
                 for (let wordBoxLetter of wordLetters) {
                     if (item.textContent === wordBoxLetter.textContent) {
+                        lettersCountArray.push(wordBoxLetter);
+                        console.log(lettersCountArray.length);
                         wordBoxLetter.style.display = 'block';
                         letterDisappearance(item);
-                        count++;
-                        // if (count === wordLetters.length) {
-                        //     victoryScreen();
-                        // }
-                    } else {
-                        wrongLetter = true
+                        matchFound = true;
                     }
                 }
-                if (wrongLetter === true) {
-                    console.log('wrong letter')
-                    let g = getHangmanDetails();
-                    g[0].style.display = 'block';
+                if (lettersCountArray.length === wordLetters.length) {
+                    console.log(`lettersArray = ${lettersCountArray.length}
+                    wordArray = ${wordLetters.length}`);
+                    victoryScreen();
+                }
+                if (matchFound) {
+                    wrongLetter = false;
+                } else {
+                    letterDisappearance(item);
+                    wrongLetter = true;
+                    console.log('wrong letter');
+                    getBodyArray()[count].style.display = 'block';
+                    count++;
                 }
             });
         })

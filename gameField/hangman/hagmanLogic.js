@@ -1,25 +1,23 @@
 'use strict';
 
-let isFirstCall = true;
+const hangmanDetails = document.querySelectorAll('.person');
+// let isFirstCall = true;
 
-function getBodyArray() {
-    const hangmanDetails = document.querySelectorAll('.person');
+export function getBodyArray() {
+    let bodyParts = hangmanDetails;
     let array = [];
 
-    for (let item of hangmanDetails) {
+    for (let item of bodyParts) {
         array.push(item)
     }
     return array;
-}
-
-export function getHangmanDetails() {
-    if (isFirstCall) {
-        isFirstCall = false;
-        return getBodyArray();
-    } else {
-        let bodyParts = getBodyArray();
-        bodyParts.shift();
-        console.log(bodyParts)
-        return bodyParts;
-    }
+    // if (isFirstCall) {
+    //     isFirstCall = false;
+    //     console.log(array)
+    //     return array;
+    // } else {
+    //     array.shift();
+    //     console.log(array)
+    //     return array;
+    // }
 }

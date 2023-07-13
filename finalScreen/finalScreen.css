@@ -8,12 +8,12 @@
     display: none;
 }
 
-#victory-text {
+#victory-text, #defeat-text {
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
-    width: 100%;
+    width: 95%;
 }
 
 #defeat-text {
@@ -21,7 +21,7 @@
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
-    width: 100%;
+    width: 83%;
 }
 
 #victory-text span, #defeat-text span {
@@ -37,7 +37,7 @@
     animation-delay: calc(.1s * var(--i));
 }
 
-#victory-text span, #defeat-text {
+#victory-text, #defeat-text {
     display: none;
 }
 

@@ -84,9 +84,6 @@ export function letterDisappearance(letter) {
     transition: .5s;
     animation: hide-letter .5s 1;
     animation-fill-mode: forwards;`;
-    setTimeout(() => {
-        letter.remove();
-    }, 800);
 }
 
 export function defeatScreenAppearance() {
